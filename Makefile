@@ -11,7 +11,7 @@ install:
 		printf \
 "Bash completion was not installed, because the directory was not found. \
 If you have bash completion installed, follow the README \
-(https://github.com/pimterry/notes#installing-bash-completion) \
+(https://github.com/weavenet/notes#installing-bash-completion) \
 to manually install it.\n\n"; \
 	fi # Small test for bash completion support
 
