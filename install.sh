@@ -25,7 +25,9 @@ user_home=`eval echo ~$SUDO_USER`
 extract_dir=$(mktemp -d /tmp/notes.XXXXX)
 
 echo "Downloading and extracting Notes from Repository..."
-    curl -L https://api.github.com/repos/weavenet/notes/tarball/latest-release | tar -xzp -C $extract_dir --strip-components=1
+    latest_tarball=`curl -L https://api.github.com/repos/weavenet/notes/releases/latest |grep tarball_url | awk '{print $2}' |cut -d\" -f2`
+    echo "Downloading '$latest_tarball'."
+    curl -L $latest_tarball | tar -xzp -C $extract_dir --strip-components=1
 if [ "$1" != "uninstall" ]; then
     echo "Installing notes..."
     cd $extract_dir && make USERDIR=$user_home
