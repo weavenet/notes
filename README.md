@@ -1,4 +1,4 @@
-Fork of [pimterry/notes](github.com/pimterry/notes) to add a few tweaks.
+Fork of [pimterry/notes](https://github.com/pimterry/notes) to add a few tweaks.
 
 Install
 
