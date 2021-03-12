@@ -104,7 +104,7 @@ generate_name() {
     local append_num=0
     local format_string="`date +$QUICKNOTE_FORMAT`"
     # Initial test has no append
-    local resolved_name=$format_string
+    local resolved_name=$format_string.$append_num
     while [[ -e "$notes_dir/$resolved_name.$NOTES_EXT" ]]
     do
         append_num=$[$append_num+1]
